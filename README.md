@@ -1,7 +1,7 @@
 # Descrição do projeto
 ## Projeto de um blog utilizando SQLite, Express, NodeJS e outras dependências com o objetivo de fazer publicações diversas sobre o dia-a-dia dos usuários.
 
-:round_pushpin: - [Comandos](#-comandos-utilizados-em-react-native) <br>
+:round_pushpin: - [Instalação e Execução](#instalação-e-execução) <br>
 ## <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="30" height="30"/> Comandos utilizados em React Native
  
 # Índice
@@ -16,7 +16,7 @@
 * [Licença](#licença)
 * [Conclusão](#conclusão)
   
-#Instalação e execução
+# Instalação e execução
 -Instalar o Nodejs de acordo com o sistema operacional.
 -Instalar o Express de acordo com o sistema operacional.
 -Instalar o Sqlite3 de acordo com o sistema operacional.
