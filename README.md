@@ -1,7 +1,10 @@
-#Descrição do projeto
-	##Projeto de um blog utilizando SQLite, Express, NodeJS e outras dependências com o objetivo de fazer publicações diversas sobre o dia-a-dia dos usuários.
+# Descrição do projeto
+## Projeto de um blog utilizando SQLite, Express, NodeJS e outras dependências com o objetivo de fazer publicações diversas sobre o dia-a-dia dos usuários.
+
+:round_pushpin: - [Comandos](#-comandos-utilizados-em-react-native) <br>
+## <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="30" height="30"/> Comandos utilizados em React Native
  
-#Índice
+# Índice
 * [Descrição do Projeto](#descrição-do-projeto)
 * [Índice](#índice)
 * [Status do Projeto](#status-do-Projeto)
