@@ -28,20 +28,22 @@ const checkNome = () => {
 
 /* ---------- FUNÇÃO PARA VERIFICAR O EMAIL --------------------- */
 const checkEmail = (email) => {
-  const partesEmail = email.split("@");
-
-  if (
-    (partesEmail.length === 2 &&
-      partesEmail[1].toLowerCase() === "gmail.com") ||
-    (partesEmail.length === 2 &&
-      partesEmail[1].toLowerCase() === "outlook.com") ||
-    (partesEmail.length === 2 && partesEmail[1].toLowerCase() === "hotmail.com")
-  ) {
-    return true;
-  } else {
-    return false;
+  const emailTrinmed = emailValue.trim();
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  if (!emailRegex.test(emailTrinmed)) {
+    return false
   }
-};
+;
+
+//Verificação de domínio
+const partesEmail = emailTrinmed.split("@")
+if (partesEmail.length === 2) {
+  const domain = partesEmail[1].toLowerCase()
+  const allowedDomains = ["gmail.com", "outlook.com", "hotmail.com"]
+  return true
+} 
+return false
+}
 /* --------------------------------------------------------------------- */
 
 /* ---------- FUNÇÃO PARA VERIFICAR IGUALDADE DAS SENHAS --------------- */
@@ -170,10 +172,11 @@ try {
     console.log('Sucesso', result)
     formulario.reset()
 
-    alert('Cadastro realizado com sucesso! ' + (result.message || ""))
+    alert('Cadastro realizado com sucesso!' + (result.message || ""))
     window.location.href = "/login"
   } else {
-    const errorData = await response.json().catch(() => ({message:'Erro ao processar a resposta do servidor.' }))
+    const errorData = await response.json().catch(() => ({
+      message:'Erro ao processar a resposta do servidor.' }))
     console.error('Erro do servidor', response.status, errorData)
     createDisplayMsgError(`Erro ${errorData.message || response.statusText}`)
   }
